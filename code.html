@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; font-family: 'Montserrat', sans-serif; background-color: #FFA07A;">
+    <h1>Code Example</h1>
+    <pre style="background-color: white; text-align: left;">
+        function calculateLb() {
+            var input = document.getElementById("numberInput");
+            var x = parseFloat(input.value);
+            if (!isNaN(x) && x > 0) {
+              var l = Math.log2(x);
+              var result = document.getElementById("result");
+              result.innerHTML = "Lb(" + x + ") = " + l.toFixed(4); 
+            } 
+            else {
+              alert("Please enter a valid positive number.");
+            }
+          }
+    </pre>
+</body>
+</html>

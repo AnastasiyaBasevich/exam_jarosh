@@ -1,0 +1,9 @@
+.body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.body a {
+    margin-left: 20px;
+    font-size: 20px;
+}

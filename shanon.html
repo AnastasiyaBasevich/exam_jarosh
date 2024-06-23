@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center; font-family: 'Montserrat', sans-serif; background-color: #FFA07A;">
+    <h1>Shannon Entropy</h1>
+    <p id="demo"></p>
+    <p><img alt="Forma Diagram" src="forma.jpg" width="270"/></p>
+    <div>
+      <input name="TextBox1" type="text" value="50" id="TextBox1"/>
+      <input name="TextBox2" type="text" value="25" id="TextBox2"/>
+      <input name="TextBox3" type="text" value="12.5" id="TextBox3"/>
+      <input name="TextBox4" type="text" value="12.5" id="TextBox4"/>
+      <input type="button" name="Button1" value="H(X)=" id="Button1" onclick="Calculate()"/>
+      <span id="Label1"></span>
+    </div>
+ 
+
+  <script>
+    function Calculate() {
+      var ev = [];
+      ev[0] = parseFloat(document.getElementById("TextBox1").value);
+      ev[1] = parseFloat(document.getElementById("TextBox2").value);
+      ev[2] = parseFloat(document.getElementById("TextBox3").value);
+      ev[3] = parseFloat(document.getElementById("TextBox4").value);
+      var s = 0;
+      for (var i = 0; i < ev.length; i++) {
+        var p = ev[i] / 100;
+        s += p * Math.log2(1 / p);
+      }
+
+      document.getElementById("Label1").innerHTML = s.toFixed(2);
+    }
+  </script>
+</body>
+</html>
